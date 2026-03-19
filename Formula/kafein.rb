@@ -1,8 +1,8 @@
 class Kafein < Formula
   desc "Minimalist macOS menu bar app to prevent sleep"
   homepage "https://github.com/ohtufan/kafein"
-  url "https://github.com/ohtufan/kafein/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "6f7e75d65cd82fa69b436cb690257facb2a6bc62b263e874515c0224ab8b692b"
+  url "https://github.com/ohtufan/kafein/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "f7b29175d476b0f04e90219a150bc3aeb66aabb2f35bad3e7b4981ab566d3d10"
   license "MIT"
 
   depends_on xcode: ["15.0", :build]
@@ -17,6 +17,7 @@ class Kafein < Formula
 
     cp ".build/release/Kafein", "#{app_bundle}/MacOS/Kafein"
     cp "Resources/Info.plist", "#{app_bundle}/"
+    cp "Resources/AppIcon.icns", "#{app_bundle}/Resources/"
   end
 
   def caveats
